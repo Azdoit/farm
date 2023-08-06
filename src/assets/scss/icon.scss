@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.woff2?t=1690462493338') format('woff2'),
+       url('../fonts/iconfont.woff?t=1690462493338') format('woff'),
+       url('../fonts/iconfont.ttf?t=1690462493338') format('truetype'),
+}
+
+[class^="icon-"],
+[class*="icon-"] {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+.icon-resoure {
+  color: #515151;
+  font-size: 30px;
+}
+
+
+.icon-resoure::before {
+  content: "\e8a4";
+}
+
+.icon-up::before {
+  content: "\e76d";
+}
+
+.icon-down::before {
+  content: "\e771";
+}
+
+.icon-right::before {
+  content: "\e626" ;
+}
+
+.icon-select::before {
+  content: "\e604" ;
+}
+
+.icon-delete::before {
+  content: "\e718" ;
+}
+
+.icon-result::before {
+  content: "\e6b2" ;
+}
+
+.icon-position::before {
+  content: "\e600" ;
+}
+
+.icon-player {
+  font-size: 40px;
+}
+
+.icon-player::before {
+  content: "\e630";
+}
+
+
+.icon-opened {
+  font-size: 30px;
+}
+.icon-closed {
+font-size: 30px;
+}
+
+.icon-opened::before {
+  content: "\e6c3";
+}
+
+.icon-closed::before {
+  content: "\e6c4";
+}
