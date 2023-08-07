@@ -1,16 +1,24 @@
 <template>
-  <!-- <svg-icon name="phone"></svg-icon> -->
-  <img :src="phone" alt="">
-  <svg-icon name="statusBar" class="statusBar"></svg-icon>
-  <div class="wrapper" id="wrapperRoot">
-    <div class="show">
-      <router-view></router-view>
+  <img :src="phone" alt="" class="phone" />
+  <div class="root" id="root">
+    <img :src="statusBar" alt="" class="statusBar" />
+    <div class="content" id="content">
+      <div class="show">
+        <router-view></router-view>
+      </div>
     </div>
     <div class="footer">
       <div class="tabs">
-        <router-link class="tab" v-for="(tab, index) in tabs" :key="tab.name" :to="tab.path"
-          @click.native="changeTab(index)">
-          <svg-icon :name="index === curTab ? tab.svgIcon1 : tab.svgIcon"></svg-icon>
+        <router-link
+          class="tab"
+          v-for="(tab, index) in tabs"
+          :key="tab.name"
+          :to="tab.path"
+          @click.native="changeTab(index)"
+        >
+          <svg-icon
+            :name="index === curTab ? tab.svgIcon1 : tab.svgIcon"
+          ></svg-icon>
           <span :class="{ active: index === curTab }">{{ tab.name }}</span>
         </router-link>
       </div>
@@ -22,9 +30,10 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
-import phone from '@/images/phone.png'
-const router = useRouter()
-router.push('/')
+import phone from "@/images/phone.png";
+import statusBar from "@/images/StatusBar.png";
+const router = useRouter();
+router.push("/");
 const curTab = ref(0);
 const tabs = reactive([
   {
@@ -58,35 +67,33 @@ const changeTab = (index) => {
 </script>
 
 <style lang="scss" scoped>
-// .svg-icon {
-//   position: absolute;
-//   top:10px;
-//   left: 20px;
-// }
-img {
-  width: 433px;
-  height: 934px;
+.phone {
+  width: 434px;
+  height: 835px;
   position: fixed;
-  top:11px;
+  top: 54px;
   margin: auto;
 }
-.statusBar {
-  position: fixed;
-  margin: auto;
-  top: -114px;
-  font-size: 366px;
-}
-.wrapper {
+.root {
   box-sizing: border-box;
-  position: relative;
   width: 376px;
-  height: 778px;
-
-  .show {
+  height: 750px;
+  position: relative;
+  .statusBar {
+    display: block;
+    height: 20px;
     width: 100%;
-    height: 729px;
+    margin-bottom: 10px;
   }
-
+  .content {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    .show {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .footer {
     display: flex;
     flex-direction: column;
@@ -97,8 +104,8 @@ img {
       padding-top: 12px;
       display: flex;
       justify-content: space-around;
-      
-      gap:50px;
+
+      gap: 50px;
 
       .tab {
         display: flex;
@@ -116,7 +123,7 @@ img {
           color: #343434;
 
           &.active {
-            color: #00A796;
+            color: #00a796;
           }
         }
 

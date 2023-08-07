@@ -231,7 +231,7 @@ const handleClick = () => {
     bottom: 0;
     width: 100%;
     background-color: #fff;
-    height: 151px;
+    height: 160px;
     font-size: 14px;
     &_title {
       padding-top: 20px;

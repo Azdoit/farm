@@ -45,7 +45,7 @@ const cancelMask = () => {
     .content {
         position: absolute;
         letter-spacing: 1px;
-        top: 260px;
+        top: 162px;
         left: 37px;
         width: 260px;
         height: 350px;
@@ -80,7 +80,7 @@ const cancelMask = () => {
     .cancle {
         position: absolute;
         left: 162px;
-        bottom: 57px;
+        bottom: 17px;
         width: 51px;
         height: 51px;
         line-height: 51px;

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <Teleport to="#wrapperRoot">
+    <Teleport to="#content">
       <Mask v-show="show" @update="updateShowMask" />
     </Teleport>
     <div class="claim">
@@ -180,7 +180,7 @@ const fastInput = () => {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 51px 12px 15px 12px;
+  padding: 20px 12px 15px 12px;
   background-color: #EEF8FF;
 
   .claim {
@@ -305,7 +305,7 @@ const fastInput = () => {
     &_title {
       background-color: #F8F8F8;
       border-radius: 15px 15px 0 0;
-      height: 44px;
+      height: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -322,7 +322,7 @@ const fastInput = () => {
         &_item {
           display: flex;
           align-items: center;
-          margin-bottom: 31px;
+          margin-bottom: 20px;
           position: relative;
 
           &:last-child {
